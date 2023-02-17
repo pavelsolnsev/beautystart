@@ -1,0 +1,34 @@
+/**********/
+/* Common */
+@import 'common/_mixin';
+@import 'common/_default';
+@import 'common/_common';
+
+
+
+/*************/
+/* Blocks */
+@import 'widget-ny-x2/_style';
+@import 'form/_form';
+@import 'header/_style';
+@import 'main/_style';
+@import 'form-block/_style';
+@import 'teachers/_style';
+@import 'form-block/_style';
+@import 'program/_style';
+@import 'format/_style';
+@import 'get/_style';
+@import 'price/_style';
+@import 'partners/_style';
+@import 'contacts/_style';
+
+@import 'synergy/_style';
+@import 'bottom/_style';
+@import 'footer/_style';
+
+/*************/
+/* Popups */
+@import 'popup/_popup';
+
+/* Thanks */
+@import 'thanks/_style';

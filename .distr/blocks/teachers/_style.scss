@@ -1,0 +1,262 @@
+.teachers {
+  padding: 3rem 0;
+
+  @include _768 {
+    padding: 6rem 0;
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @include _992 {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__wrapper {}
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    @include _992 {
+      justify-content: center;
+
+      &:nth-child(odd) {
+        .teachers__item-elem:last-child {
+          margin-right: auto;
+        }
+      }
+
+      &:nth-child(even) {
+        .teachers__item-elem:first-child {
+          margin-left: auto;
+        }
+      }
+
+      // &:last-child {
+      //   .teachers__item-elem {
+      //     margin: unset !important;
+      //   }
+      // }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @include _992 {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &:nth-child(1) {
+      position: relative;
+
+      &::after {
+        content: '';
+        background: url('../img/teachers/crown.png') top / contain no-repeat;
+        display: block;
+        width: 24rem;
+        height: 27rem;
+        position: absolute;
+        bottom: -3rem;
+        left: -14.4rem;
+        transform: rotate(60deg);
+
+        @media (min-width: 361px) {
+          display: none;
+        }
+
+        @include _992 {
+          display: block;
+          bottom: unset;
+          left: unset;
+          top: -20rem;
+          right: -34rem;
+          width: 49rem;
+          height: 55rem;
+          transform: rotate(0deg);
+        }
+
+        @include _1200 {
+          right: -12rem;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      position: relative;
+
+      &::after {
+        background: url('../img/teachers/boom.png') top / contain no-repeat;
+        display: none;
+        content: '';
+        width: 96rem;
+        height: 61rem;
+        position: absolute;
+
+        @include _992 {
+          display: block;
+          left: -80rem;
+        }
+
+        @include _1200 {
+          left: -60rem;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+
+      &::after {
+        background: url('../img/teachers/love.png') top / contain no-repeat;
+        display: none;
+        content: '';
+        width: 50rem;
+        height: 80rem;
+        position: absolute;
+        z-index: -1;
+
+        @include _992 {
+          display: block;
+          right: -35rem;
+          bottom: -10rem;
+        }
+
+        @include _1200 {
+          right: -15rem;
+          bottom: -15rem;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      position: relative;
+
+      &::after {
+        background: url('../img/teachers/boom.png') top / contain no-repeat;
+        display: none;
+        content: '';
+        width: 95rem;
+        height: 61rem;
+        position: absolute;
+        transform: scale(-1, 1) rotate(311deg);
+
+        @include _992 {
+          display: block;
+          bottom: 11rem;
+          left: -76rem;
+        }
+
+        @include _1200 {
+          bottom: 11rem;
+          left: -58rem;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      position: relative;
+
+      &::after {
+        background: url('../img/teachers/crown.png') top / contain no-repeat;
+        display: none;
+        content: '';
+        width: 49rem;
+        height: 55rem;
+        position: absolute;
+        transform: rotate(25deg);
+
+        @include _992 {
+          display: block;
+          bottom: -5rem;
+          right: -35rem;
+        }
+
+        @include _1200 {
+          right: -15rem;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      position: relative;
+
+      &::after {
+        content: '';
+        background: url('../img/teachers/boom.png') top / contain no-repeat;
+        display: none;
+        width: 46rem;
+        height: 25.4rem;
+        position: absolute;
+        bottom: 6rem;
+        right: -17.5rem;
+        transform: rotate(-90deg);
+
+        @include _480 {
+          right: -12rem;
+          bottom: 4rem;
+        }
+
+        @include _768 {
+          width: 60rem;
+          height: 30rem;
+          bottom: 8rem;
+        }
+
+        @include _992 {
+          display: block;
+          width: 95rem;
+          height: 61rem;
+          transform: rotate(187deg);
+          right: unset;
+          bottom: 5rem;
+          left: -80rem;
+        }
+
+        @include _1200 {
+          left: -60rem;
+        }
+      }
+    }
+
+    &-elem {
+      flex-basis: 48%;
+      max-width: 36.8rem;
+
+      @include _992 {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &-foto {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    &-title {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      color: #FF0040;
+
+      @include _992 {
+        font-size: 2rem;
+      }
+    }
+
+    &-description {
+      font-size: 1.5rem;
+      line-height: 150%;
+      color: #FFFCFC;
+
+      @include _992 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

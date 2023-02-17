@@ -1,0 +1,193 @@
+.footer {
+  padding: 3rem 0;
+
+  &__wrapper {
+    @include _992 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &-img {
+      &:nth-child(1) {
+        max-width: 15.4rem;
+      }
+
+      &:nth-child(2) {
+        max-width: 5.2rem;
+      }
+
+      &:first-child {
+        margin-right: 1.5rem;
+      }
+
+      @include _992 {
+        margin-bottom: 0;
+
+        &:nth-child(1) {
+          max-width: 17rem;
+        }
+
+        &:nth-child(2) {
+          max-width: 6rem;
+        }
+
+        &:first-child {
+          margin-right: 2rem;
+        }
+      }
+
+      @include _1200 {
+        &:nth-child(1) {
+          max-width: 20rem;
+        }
+
+        &:nth-child(2) {
+          max-width: 7rem;
+        }
+
+        &:first-child {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include _576 {
+      justify-content: flex-start;
+    }
+
+    @include _992 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+
+    @include _576 {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    @include _992 {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__contacts {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    @include _992 {
+      display: flex;
+    }
+
+    &-phone {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+
+    &-mail {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+
+    @include _768 {
+      flex-direction: row;
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      color: #655870;
+
+      @include _768 {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+
+      @include _992 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+}
+
+.bottom-scroll {
+  visibility: hidden;
+  position: fixed;
+  z-index: 99;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s all;
+
+  @include _992 {
+    display: none;
+  }
+
+  &__button {
+    outline: none;
+    border: none;
+    width: 80%;
+    padding: 1.6rem 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    box-shadow: -1px 4px 22px 0px rgb(255, 0, 64);
+    color: #ffffff;
+    background: rgb(255, 0, 64);
+
+    @include _480 {
+      width: 50%;
+    }
+
+    @include _768 {
+      width: 30%;
+    }
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    justify-content: center;
+  }
+}

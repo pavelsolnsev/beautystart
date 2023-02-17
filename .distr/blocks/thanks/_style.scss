@@ -1,0 +1,38 @@
+.page-thanks {
+
+  .header__nav-button{
+    display: none;
+  }
+  .header__nav--active{
+    top: 17rem;
+    @include _768{
+      top: 19rem;
+    }
+  }
+
+  .thanks {
+    padding: 18.4rem 0 1.5rem;
+
+    .main{
+      &__item{
+        &-description{
+          @include _1200 {
+            padding-top: 9rem;
+          }
+        }
+        &-title{
+          @include _1200{
+            margin-bottom: 4rem;
+          }
+        }
+        &-subtitle{
+          margin-bottom: 4rem;
+          max-width: 54rem;
+          @include _1200{
+            margin-bottom: 9rem;
+          }
+        }
+      }
+    }
+  }
+}

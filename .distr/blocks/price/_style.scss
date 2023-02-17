@@ -1,0 +1,187 @@
+.price {
+  padding: 3rem 0;
+
+  @include _768 {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @include _992 {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__wrapper {
+    width: 90%;
+
+
+    @include _576{
+      width: 48%
+    }
+    @include _992{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 48%;
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include _576{
+      flex-direction: row;
+      align-items: normal;
+    }
+  }
+
+  &__tag {
+    padding: 1.5rem;
+    border: 0.1rem solid #313131;
+
+    @include _768{
+      flex-basis: 49%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include _992{
+      padding: 2.5rem;
+    }
+    @include _1200{
+      padding: 4.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+      @include _768{
+        margin-bottom: 3rem;
+      }
+      @include _992{
+        margin-bottom: 4rem;
+      }
+    }
+
+    &--pay{
+      position: relative;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      @include _992{
+        margin-bottom: 1rem;
+        font-size: 2.6rem;
+      }
+    }
+
+    &-oldfrice {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      text-decoration: line-through;
+      color: #AB8790;
+    }
+
+    &-price {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 4.3rem;
+      line-height: 3.2rem;
+      color: #FF0040;
+    }
+
+    &-description {
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    &-button {
+      display: inline-block;
+      padding: 1.2rem 2.4rem;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      border: 0.1rem solid #FF0040;
+      cursor: pointer;
+
+      @include _768{
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__item {
+    @include _576{
+      flex-direction: column;
+    }
+    @include _992{
+      flex-basis: 49%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:nth-child(1) {
+      @include _768{
+        display: flex;
+        justify-content: space-between;
+      }
+      @include _992 {
+        flex-direction: column;
+      }
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 3.2rem;
+      @include _992{
+        font-size: 1.8rem;
+      }
+    }
+
+    &-id {
+      display: none;
+    }
+
+    &-list {
+      padding-left: 3.2rem;
+    }
+
+    &-point {position: relative;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      @include _992{
+        font-size: 1.8rem;
+      }
+      &::before{
+        content: '';
+        background: url('../img/price/check.svg') no-repeat;
+        background-size: contain;
+        display: block;
+        width: 2.2rem;
+        height: 2.2rem;
+        position: absolute;
+        top: 0.2rem;
+        left: -3.2rem;
+      }
+      &:not(:last-child){
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}
+

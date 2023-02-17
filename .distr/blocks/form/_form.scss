@@ -1,0 +1,24 @@
+.form {
+  &__input {
+    &:focus {
+      outline: none;
+    }
+    &.error {
+      border: 0.1rem solid rgb(255, 98, 98) !important;
+      background: #fff;
+      color: rgb(255, 98, 98) !important;
+    }
+    &.valid {
+      border: 0.1rem solid rgb(36, 158, 72) !important;
+      background: #fff;
+      color: rgb(36, 158, 72) !important;
+    }
+  }
+  &__button{
+    cursor: pointer;
+  }
+}
+
+#name-error, #phone-error, #email-error {
+  display: none !important;
+}

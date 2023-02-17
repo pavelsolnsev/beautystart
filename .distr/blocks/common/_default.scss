@@ -1,0 +1,114 @@
+html {
+  font-size: 10px;
+
+  @include _2k {
+    font-size: 12px;
+  }
+
+  @include _4k {
+    font-size: 18px;
+  }
+}
+
+.modal-root--3RoMz {
+  top: 60px !important;
+}
+
+* {
+  // transition: all 0.2s ease;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: 'TTNormsPro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  background-color: #ffffff;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+.widget-form-privacy__content {
+  display: none;
+}
+
+// Запрет масштабирования по двойному клику на сенсорных экранах
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+h1{
+  margin: 0;
+}
+
+li{
+  list-style: none;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+.lazy {
+  background-image: none !important;
+  opacity: 0;
+  &:before,
+  &:after {
+    content: none !important;
+  }
+
+  &-loaded {
+    opacity: 1;
+    transition: 0.1s;
+  }
+}
+
+input::-webkit-input-placeholder {
+  opacity: 1;
+  color: inherit;
+  font-size: inherit;
+}
+
+input::-moz-placeholder {
+  opacity: 1;
+  color: inherit;
+  font-size: inherit;
+}
+
+input:-moz-placeholder {
+  opacity: 1;
+  color: inherit;
+  font-size: inherit;
+}
+
+input:-ms-input-placeholder {
+  opacity: 1;
+  color: inherit;
+  font-size: inherit;
+}
